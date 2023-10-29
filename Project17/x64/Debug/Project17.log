@@ -1,0 +1,16 @@
+﻿  1.C
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(7,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(7,9): message : 请考虑在格式字符串中使用“%zd”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(8,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(8,9): message : 请考虑在格式字符串中使用“%zd”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(9,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(9,9): message : 请考虑在格式字符串中使用“%zd”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(10,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(10,9): message : 请考虑在格式字符串中使用“%zd”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(11,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(11,9): message : 请考虑在格式字符串中使用“%zd”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(12,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(12,9): message : 请考虑在格式字符串中使用“%zd”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(13,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\1.C(13,9): message : 请考虑在格式字符串中使用“%zd”
+  Project17.vcxproj -> F:\学习\学习文件\大学科目文件\计算机C语言\C语言\c-code\Project17\x64\Debug\Project17.exe

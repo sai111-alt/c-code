@@ -2,34 +2,66 @@
 
 #include<stdio.h>
 
+#include<assert.h>
+int my_strlen(const char* p)
+{
+	int count = 0;
+	assert(p != NULL);
+	while (*p != '\0')
+	{
+		count++;
+		p++;
+	}
+	return count;
+}
 int main()
 {
-
+	char p[] = "abcdef";
+	int len = my_strlen(p);
+	printf("len = %d\n", len);
 
 	return 0;
 }
 
-////#include<string.h>
+//#include<string.h>
 //#include<assert.h>
-//void my_strcpy(char* dest,const char* src)
+//char* my_strcpy(char* dest,const char* src)
 //{
+//	char* ret = dest;
 //	assert(dest != NULL);
 //	assert(src != NULL);
 //	while (*dest++ = *src++)
 //	{
-//		;
+//		; 
 //	}
+//	return ret;
 //}
 //
 //int main()
 //{
 //	char arr1[] = "############";
 //	char arr2[] = "bit";
-//	my_strcpy(arr1, arr2);
-//	printf("%s\n", arr1);
+//	printf("%s\n", my_strcpy(arr1, arr2));
 //
 //	return 0;
 //}
+
+
+//int main()
+//{
+//	const int num = 10;
+//	int n = 100;
+//	const int* p = &num;
+//	int* l = &num;
+//	*l = 20;
+//	//*p = 100;
+//	//p = &n;
+//
+//	printf("%d\n", num);
+//
+//	return 0;
+//}
+
 
 ////int Add(int x, int y)
 ////{

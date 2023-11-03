@@ -1,186 +1,39 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
-#include<stdio.h>
+#include<stdio.h>JK'' N 4
+void fun(int t[N][N],int m) 
+{
+	int i, j;
+	/**********FILL1**********/
+	for (i = 0; i < N; i++) 
+	{
+		for (j = N - 1 - m; j >= 0; j--)
+			/**********FILL2**********/
+			t[i][j + m] = t[i][j];
+		///**********FILL3**********/
+			for (j = 0; j <m; j++)
+				t[i][j] = 0;
+	}
+}
+int main()
+{
+	int t[][N] = { 21,12,13,24,25,16,47,38,29,11,32,54,42,21,33,10 },i,j,m; 
+	printf("\nThe original array : \n");
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < N; j++)
+			printf("%2d ", t[i][j]); 
+		printf("\n");
+	}
+	printf("Input m (m<=%d) : ", N); scanf("%d", &m); fun(t, m);
+	printf("\nThe result is: \n"); 
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < N; j++)
+			printf("%2d ", t[i][j]); printf("\n");
+	}
 
-//int gy(int m, int n)
-//{
-//    int r = 0;
-//    if ((r = m % n) == 0)
-//        return n;
-//    else
-//    {
-//        return gy(n,r);
-//    }
-//}
-//int main()//第6题
-//{
-//	int m = 0;
-//    int n = 0;
-//    printf("请输入两个正整数：");
-//    scanf("%d,%d",&m,&n);
-//    printf("%d,%d的最大公约数是：%d\n",m,n,gy(m,n));
-//
-//	return 0;
-//}
-
-//int tj(long long num,int* arr)
-//{
-//	while (num != 0)
-//	{
-//		int count = num % 10;
-//		arr[count]++;
-//		num /= 10;
-//	}
-//}
-//int main()//第5题
-//{
-//	int i = 0;
-//	long long num = 0;
-//	int arr[10] = { 0 };
-//    printf("请输入一个10进制数:");
-//    scanf("%lld",&num);
-//	tj(num,arr);
-//	for (i = 0; i < 10; i++)
-//	{
-//		if (arr[i] != 0)
-//		{
-//			printf("数字%d的个数共有%d个\n", i, arr[i]);
-//		}
-//	}
-//
-//	return 0;
-//}
-
-//int hws(char* arr)
-//{
-//    char* r = arr;
-//    char* k = arr;
-//    while (*k != '\0')
-//    {
-//        k++;
-//    }
-//    k--;
-//    while (r <= k)
-//    {
-//        if (*r == *k)
-//        {
-//            r++;
-//            k--;
-//        }
-//        else
-//            return 0;
-//    }
-//    return 1;
-//}
-//int main()//第4题
-//{
-//    char arr[10] = { 0 };
-//    printf("请输入一个10进制数:");
-//    scanf("%s",&arr);
-//    if (hws(arr) == 1)
-//    {
-//        printf("%s是回文数!\n", arr);
-//    }
-//    else
-//    {
-//        printf("%s不是回文数!\n", arr);
-//    }
-//
-//    return 0;
-//}
-
-//void kg(char arr[])
-//{
-//    int i = 0;
-//    for (i = 4; i > 0; i--)
-//    {
-//        arr[2 * i] = arr[i];
-//        arr[2 * i - 1] = ' ';
-//    }
-//}
-//int main()//p216习题第8题（第3题）
-//{
-//    char arr[10] = { 0 };
-//    printf("请输入一个10进制整数:");
-//    scanf("%s",&arr);
-//    printf("\n");
-//    kg(arr);
-//    printf("转换后结果为：%s", arr);
-//
-//    return 0;
-//}
-
-//int gy(int m,int n)
-//{
-//    int r = 0;
-//    while(r=m%n)
-//    {
-//        m=n;
-//        n=r;
-//    }
-//    return n;
-//}
-//int gb(int m,int n)
-//{
-//    int i = 0;
-//    i = gy(m, n);
-//    i = m * n / i;//最小公倍数等于两数之积除以最大公约数
-//}
-//int main()//p215习题第1题（第1题）
-//{
-//    int m = 0;
-//    int n = 0;
-//    printf("请输入两个正整数：");
-//    scanf("%d,%d",&m,&n);
-//    printf("%d,%d的最大公约数是：%d\n",m,n,gy(m,n));
-//    printf("%d,%d的最小功倍数是：%d\n",m,n,gb(m,n));
-//
-//    return 0;
-//}
-
-//#include<math.h>
-//int is_prime(int i)
-//{
-//    int j = 0;
-//    for(j=2; j <= sqrt(i); j++)
-//    {
-//        if(i % j == 0)
-//            return 0;
-//    }
-//    return 1;
-//}
-//
-//int main()//p215习题第3题（第2题）
-//{
-//    int i = 0;
-//    printf("请输入一个正整数：");
-//    scanf("%d",&i);
-//    if(is_prime(i) == 1)
-//        printf("%d是素数。\n",i);
-//    else if(is_prime(i) == 0)
-//        printf("%d不是素数。\n",i);
-//
-//    return 0;
-//}
-
-//int Fib(int n)//第7题
-//{
-//    if(n<=2)
-//        return 1;
-//     else
-//        return Fib(n-1)+Fib(n-2);
-//}
-//int main()
-//{
-//    int n = 0;
-//    int ret = 0;
-//    printf("请输入n值：");
-//    scanf("%d",&n);
-//    ret = Fib(n);
-//    printf("斐波那契数列第%d项的值： % d\n",n,ret);
-//
-//    return 0;
-//}
+}
 
 //#include<string.h>
 //int main()

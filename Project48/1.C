@@ -3,12 +3,63 @@
 #include<stdio.h>
 #include<string.h>
 
-int main()
-{
 
+//char* my_strstr(const char* p1,const char* p2)
+//{
+//	char* s1 = NULL;
+//	char* s2 = NULL;
+//	char* cur = (char*)p1;
+//	if (!*p2)
+//	{
+//		return (char*)p1;
+//	}
+//	while (*cur)
+//	{
+//		s1 = cur;
+//		s2 = (char*)p2;
+//		while (*s1 && *s2 && (*s1 == *s2))
+//		{
+//			s1++;
+//			s2++;
+//		}
+//		if (!*s2)
+//		{
+//			return cur;
+//		}
+//		if (!*s1)
+//		{
+//			return NULL;
+//		}
+//		cur++;
+//	}
+//	return NULL;
+//}
+//int main()
+//{
+//	char* p1 = "abcdefadasdef";
+//	char* p2 = "def";
+//	char* ret = my_strstr(p1, p2);
+//	if (ret == NULL)
+//	{
+//		printf("×Ó´®²»´æÔÚ\n");
+//	}
+//	else
+//	{
+//		printf("%s\n", ret);
+//	}
+//
+//	return 0;
+//}
 
-	return 0;
-}
+//int main()
+//{
+//	const char* p1 = "abcdef";
+//	const char* p2 = "abcqwer";
+//	int ret = strncmp(p1, p2, 3);
+//	printf("%d\n",ret);
+//
+//	return 0;
+//}
 
 //#include<string.h>
 //int main()

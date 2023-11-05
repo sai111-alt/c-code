@@ -3,6 +3,52 @@
 #include<stdio.h>
 #include<string.h>
 
+//#include<ctype.h>
+//int main()
+//{
+//	char ch = '5';
+//	int ret = isdigit(ch);
+//	printf("%d\n", ret);
+//
+//	return 0;
+//}
+
+
+//#include<ctype.h>
+//int main()
+//{
+//	char ch = tolower('Q');
+//	//char ch = toupper('q');
+//	
+//	putchar(ch);
+//
+//	return 0;
+//}
+
+//#include<errno.h>
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//	}
+//	else
+//	{
+//		printf("open file success");
+//	}
+//
+//	return 0;
+//}
+//
+//#include<errno.h>
+//int main()
+//{
+//	char* str = strerror(errno);
+//	printf("%s\n", str);
+//
+//	return 0;
+//}
 
 //char* my_strstr(const char* p1,const char* p2)
 //{

@@ -3,6 +3,63 @@
 #include<stdio.h>
 #include<string.h>
 
+//int main()
+//{
+//	int i = 0;
+//	for (i = 0; i != 0; i++)
+//	{
+//		printf("hehe\n");
+//	}
+//
+//
+//	return 0;
+//}
+
+int main()
+{
+	char arr[] = "123@234.@234";
+	char* p = "@.";
+
+	char buf[1024] = { 0 };
+	strcpy(buf, arr);
+
+	char* ret = NULL;
+
+	for (ret = strtok(buf, p); ret != NULL; ret = strtok(NULL, p))
+	{
+		printf("%s\n", ret);
+	}
+
+	//char* ret = strtok(buf, p);
+	//printf("%s\n", ret);
+
+	//ret = strtok(NULL, p);
+	//printf("%s\n", ret);
+
+	//ret = strtok(NULL, p);
+	//printf("%s\n", ret);
+
+	return 0;
+}
+
+//#include<ctype.h>
+//int main()
+//{
+//	char arr[] = "I AM A STUDENT.";
+//	int i = 0;
+//	while (arr[i])
+//	{
+//		if (isupper(arr[i]))
+//		{
+//			arr[i] = tolower(arr[i]);
+//		}
+//		i++;
+//	}
+//	printf("%s\n", arr);
+//
+//	return 0;
+//}
+
 //#include<ctype.h>
 //int main()
 //{

@@ -72,7 +72,7 @@
 //		ret--;
 //	}
 //}
-//int main()//p216习题4
+//int main()//p216习题5
 //{
 //	char arr[30] = { 0 };
 //	printf("请输入一个字符串：");
@@ -133,12 +133,12 @@
 //	while (n)
 //	{
 //		/**********FILL**********/
-//		switch (__1__)
+//		switch (n%10)
 //		{
-//			/**********FILL**********/
-//		case 1:   c1++ : __2__;
-//			/**********FILL**********/
-//		case 2:   c2++ : __3__;
+//		/**********FILL**********/
+//		case 1:   c1++; break;
+//		/**********FILL**********/
+//		case 2:   c2++; break;
 //		case 3:   c3++;
 //		}
 //		n /= 10;
@@ -152,38 +152,48 @@
 //	printf("n=%1d c1=%d c2=%d c3=%d\n", n, c1, c2, c3);
 //}
 
-#include<stdio.h>
-#include<conio.h>
-#define M 3
-#define N 4
-
-void fun(int tt[M][N], int pp[N])
-{
-	/**********Begin**********/
-	
-
-
-
-
-	/**********Begin**********/
-}
-void main()//第6题
-{
-	int t[M][N] = { {22,45,56,30},{19,33,45,38},{20,22,66,40} };
-	int p[N], i, j, k;
-	printf("The original data is:\n");
-	for (i = 0; i < M; i++)
-	{
-		for (j = 0; j < N; j++)
-			printf("%6d", t[i][j]);
-		printf("\n");
-	}
-	fun(t, p);
-	printf("\nThe result is:\n");
-	for (k = 0; k < N; k++)printf("%4d", p[k]);
-	printf("\n");
-	getchar(); getchar();
-}
+//#include<stdio.h>
+//#include<conio.h>
+//#define M 3
+//#define N 4
+//
+//void fun(int tt[M][N], int pp[N])
+//{
+//	/**********Begin**********/
+//	int j = 0;
+//	for (j = 0; j < N; j++)
+//	{
+//		int i = 0;
+//		int tmp = tt[i][j];
+//		for (i = 0; i < M; i++)
+//		{
+//			if (tmp > tt[i][j])
+//			{
+//				tmp = tt[i][j];
+//			}
+//		}
+//		*pp = tmp;
+//		pp++;
+//	}
+//	/**********Begin**********/
+//}
+//void main()//第6题
+//{
+//	int t[M][N] = { {22,45,56,30},{19,33,45,38},{20,22,66,40} };
+//	int p[N], i, j, k;
+//	printf("The original data is:\n");
+//	for (i = 0; i < M; i++)
+//	{
+//		for (j = 0; j < N; j++)
+//			printf("%6d", t[i][j]);
+//		printf("\n");
+//	}
+//	fun(t, p);
+//	printf("\nThe result is:\n");
+//	for (k = 0; k < N; k++)printf("%4d", p[k]);
+//	printf("\n");
+//	getchar(); getchar();
+//}
 
 //#include<stdio.h>
 //#include<string.h>

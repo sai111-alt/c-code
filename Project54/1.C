@@ -2,6 +2,317 @@
 
 #include<stdio.h>
 
+#include<stdlib.h>
+int a = 0;
+typedef struct node
+{
+	int v1;
+	struct node* next;
+}node;
+node* createLink()
+{
+	node* head = NULL;
+	node* p = NULL;
+	node* q = NULL;
+	int k = 1;
+	int w = 1;
+	while (k <= 100) {
+		p = (node*)malloc(sizeof(node));
+		p->v1 = k;
+		if (w == 1)
+		{
+			head = p; 
+			q = p; 
+			w = 0;
+		}
+		else
+		{
+			q->next = p;
+			q = p;
+		}
+		k = k + 10;
+	}
+	p->next = NULL;
+	return head;
+}
+void my_printf(node* p)
+{
+	while (p != NULL)
+	{
+		printf("%5d", p->v1);
+		p = p->next;
+	}
+}
+node* my_delete(node* head)
+{
+	node* p = NULL;
+	node* q = NULL;
+	int k = 0;
+	printf("\n请输入要删除的数据:");
+	scanf("%d", &k);
+	if (k < head->v1)
+	{
+		printf("删除失败，链表中无此数字\n");
+		return head;
+	}
+	else if (k == head->v1)
+	{
+		p = head;
+		head = head->next;
+		free(p);
+		a = 1;
+		return head;
+	}
+	else
+	{
+		p = q = head;
+		p = q->next;
+		while (p != NULL && p->v1 <= k)
+		{
+			if (p->v1 == k)
+			{
+				q->next = p->next;
+				free(p);
+				a = 1;
+				return head;
+			}
+			else
+			{
+				q = p;
+				p = q->next;
+			}
+		}
+		printf("删除失败，链表中无此数字\n");
+		return head;
+	}
+}
+
+int main()
+{
+	node* head = NULL;
+	head = createLink();
+	printf("原链表为\n");
+	my_printf(head);
+	head = my_delete(head);
+	if (1 == a)
+	{
+		printf("\n删除结点后的链表为\n");
+		my_printf(head);
+	}
+	
+
+	return 0;
+}
+
+//#include<stdlib.h>
+//typedef struct node
+//{
+//	int v1;
+//	struct node* next;
+//}node;
+//node* createLink() 
+//{
+//	node* head = NULL;
+//	node* p = NULL;
+//	node* q = NULL;
+//	int k = 1;
+//	p = (node*)malloc(sizeof(node));
+//	head = p; q = p;
+//	while (k <= 100) {
+//		p->v1 = k;
+//		k = k + 10;
+//		p = (node*)malloc(sizeof(node));
+//		q->next = p; 
+//		q = p;
+//	}
+//	p->next = NULL;
+//	return head;
+//}
+//void my_printf(node* p)
+//{
+//	while (p -> next != NULL)
+//	{
+//		printf("%5d", p->v1);
+//		p = p ->next;
+//	}
+//}
+//node* my_insert(node* head)
+//{
+//	node* p1 = NULL;
+//	node* p = NULL;
+//	node* q = NULL;
+//	int k = 0;
+//	printf("请输入要插入的数据:");
+//	scanf("%d", &k);
+//	p1 = (node*)malloc(sizeof(node));
+//	p1 -> v1 = k;
+//	if (head->v1 >= k)
+//	{
+//		p1->next = head;
+//		head = p1;
+//		return head;
+//	}
+//	q = p = head;
+//	while (p != NULL)
+//	{
+//		p = p->next;
+//		if (p->next == NULL)
+//		{
+//			break;
+//		}
+//		if (p->v1 >= k)
+//		{
+//			q->next = p1;
+//			p1 -> next = p;
+//			return head;
+//		}
+//		q=p;
+//	}
+//	if (p->next == NULL)
+//	{
+//		q->next = p1;
+//		p1->next = p;
+//		return head;
+//	}
+//}
+//
+//int main()
+//{
+//	node* head = NULL;
+//	head = createLink();
+//	head = my_insert(head);
+//	my_printf(head);
+//
+//	return 0;
+//}
+
+//#include<stdlib.h>
+//typedef struct node
+//{
+//	int v1;
+//	struct node* next;
+//}node;
+//node* createLink()
+//{
+//	node* head = NULL;
+//	node* p = NULL;
+//	node* q = NULL;
+//	int k = 0;
+//	printf("请输入第一个数据：");
+//	scanf("%d", &k);
+//	p = (node*)malloc(sizeof(node));
+//	head = p;
+//	q = p;
+//	while (k != -9999)
+//	{
+//		p->v1 = k;
+//		printf("请继续输入数据，输入-9999结束：");
+//		scanf("%d", &k);
+//		p = (node*)malloc(sizeof(node));
+//		q->next = p;
+//		q = p;
+//	}
+//	p->next = NULL;
+//	return head;
+//}
+//void my_printf(node* p)
+//{
+//	while (p->next != NULL)
+//	{
+//		printf("%5d", p->v1);
+//		p = p ->next;
+//	}
+//}
+//
+//int main()
+//{
+//	int k = 0;
+//	node* head = NULL;
+//	node* p = NULL;
+//	head = createLink();
+//	my_printf(head);
+//	p = head;
+//	printf("\n请输入要查找的数据：");
+//	scanf("%d", &k);
+//	while (p->next != NULL)
+//	{
+//		if (p->v1 >= k)
+//		{
+//			break;
+//		}
+//		else
+//		{
+//			p = p->next;
+//		}
+//	}
+//	if (p->v1 == k)
+//	{
+//		printf("查找成功\n");
+//	}
+//	else
+//	{
+//		printf("查找失败\n");
+//	}
+//
+//	return 0;
+//}
+
+
+//#include<stdlib.h>
+//typedef struct node
+//{
+//	int v1;
+//	struct node* next;
+//}node;
+//int main()   
+//{
+//	node* head = NULL;
+//	node* p = NULL;
+//	node* q = NULL;
+//	int i;
+//	for (i = 1; i <= 10; i++)
+//	{
+//		p = (node*)malloc(sizeof(node));
+//		printf("请输入第%d个数据：", i);
+//		scanf("%d", &p->v1);
+//		if (i == 1)
+//		{
+//			head = p;
+//			q = p;
+//		}
+//		else
+//		{
+//			q->next = p;
+//			q = p;
+//		}
+//	}
+//	p = head;
+//	for (i = 1; i <= 10; i++)
+//	{
+//		printf("%5d", p->v1);
+//		p = p->next;
+//	}
+//
+//	return 0;
+//}
+
+//typedef struct node
+//{
+//	int v1;
+//	struct node* next;
+//}node;
+//int main()
+//{
+//	node n1, n2;
+//	node* head = &n1;
+//	head->v1 = 99;
+//	head->next = &n2;
+//	head->next->v1 = 98;
+//	printf("%d %d\n", n1.v1, n2.v1);
+//
+//	return 0;
+//}
+
 //union Un
 //{
 //	int a;

@@ -2,12 +2,88 @@
 
 #include<stdio.h>
 
-int main()
-{
+//union Un
+//{
+//	int a;
+//	char arr[5];
+//};
+//int main()
+//{
+//	union Un u;
+//	printf("%d\n", sizeof(u));
+//
+//	return 0;
+//}
 
+//int check_sys()
+//{
+//	union
+//	{
+//		int i;
+//		char c;
+//	}n;
+//	n.i = 1;
+//	return n.c;
+//}
+//int main()
+//{
+//	int a = 1;
+//	int ret = check_sys();
+//	if (1 == ret)
+//	{
+//		printf("Ð¡¶Ë\n");
+//	}
+//	else
+//	{
+//		printf("´ó¶Ë\n");
+//	}
+//
+//	return 0;
+//}
 
-	return 0;
-}
+//enum sex
+//{
+//	male,
+//	female,
+//	secret
+//};
+//int main()
+//{
+//	enum sex u;
+//	printf("%d\n", sizeof(u));
+//
+//	return 0;
+//}
+
+//union Un
+//{
+//	char c;
+//	int i;
+//};
+//int main()
+//{
+//	union Un u;
+//	printf("%d\n", sizeof(u));
+//	printf("%p\n", &u);
+//	printf("%p\n", &(u.c));
+//	printf("%p\n", &(u.i));
+//
+//	return 0;
+//}
+
+//enum Color
+//{
+//	RED ,
+//	GREEN = 2,
+//	BLUE = 9
+//};
+//int main()
+//{
+//	//printf("%d %d %d \n", RED, GREEN, BLUE);
+//	enum Color c=2;
+//
+//	return 0;
+//}
 
 //struct S
 //{

@@ -4,7 +4,6 @@
 #include<stdlib.h>
 
 
-
 //char* GetMemory(void)
 //{
 //	char p[] = "hello world";

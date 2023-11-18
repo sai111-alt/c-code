@@ -2,6 +2,201 @@
 
 #include<stdio.h>
 
+void ZZ(int* left, int a, int b)
+{
+	int arr1[20] = { 0 };
+	int i = 0;
+	int* right = left;//放最右边的数组元素地址
+	while (*right)
+	{
+		right++;
+	}
+	right--;
+	for (i = 0; i < (a-b); i++)
+	{
+		*(arr1+i) = *(left + i);
+	}
+	/*for (i = 0; i < b; i++)
+	{
+		*left = *right;
+		left++;
+		right--;
+	}*/
+	for (i = 0; i < (a - b); i++)
+	{
+		*left = *(arr1+i);
+		left++;
+	}
+
+}
+int main()//p291习题4
+{
+	int i = 0;
+	int a = 0;
+	int b = 0;
+	int arr[20] = { 0 };
+	printf("请输入数组中元素的个数：");
+	scanf("%d", &a);
+	printf("请输入%d个整数:\n",a);
+	for (i = 0; i < a; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	printf("请输入移动的数据的个数：");
+	scanf("%d", &b);
+	ZZ(arr, a, b);
+	printf("移动后数据为:\n");
+	for (i = 0; i < a; i++)
+	{
+		printf("%d ", *(arr + i));
+	}
+	return 0;
+}
+
+//int ZZ(int a)
+//{
+//	int i = 0;
+//	char arr[30] = { 0 };
+//	int count = 0;//记录1到3的数字
+//	int c2 = a;//记录剩余未被淘汰的数
+//	while (c2 > 1)
+//	{
+//		for (i = 0; i < a; i++)
+//		{
+//			if (*(arr + i) != 3)
+//			{
+//				count++;
+//				*(arr + i) = count;
+//			}
+//			if (count == 3)
+//			{
+//				count = 0;
+//				c2--;
+//			}
+//		}
+//	}
+//	for (i = 0; i <= 9; i++)
+//	{
+//		if (*(arr + i) != 3)
+//		{
+//			return i+1;
+//		}
+//	}
+//}
+//int main()//p291习题5
+//{
+//	int a = 0;
+//	int b = 0;
+//	printf("请输入总人数:");
+//	scanf("%d", &a);
+//	b = ZZ(a);
+//	printf("剩下的元素的编号为：%d", b);
+//
+//	return 0;
+//}
+
+//int ZZ(char* arr)
+//{
+//	int count = 0;
+//	while (*arr)
+//	{
+//		arr++;
+//		count++;
+//	}
+//	return count;
+//}
+//int main()//p292习题6
+//{
+//	int a = 0;
+//	char arr[30] = { 0 };
+//	printf("input string:");
+//	gets(arr);
+//	a = ZZ(arr);
+//	printf("The length of string is %d\n", a);
+//
+//	return 0;
+//}
+
+//char* copy(char* arr,int a)
+//{
+//	int i = 0;
+//	a--;
+//	for (i = 0; i < a; i++)
+//	{
+//		arr++;
+//	}
+//	return arr;
+//}
+//int main()//p292第7题
+//{
+//	char arr[30] = { 0 };
+//	int a = 0;
+//	char* p = NULL;
+//	printf("请输入一个字符串:");
+//	gets(arr);
+//	printf("请输入开始拷贝的字符串编号：");
+//	scanf("%d", &a);
+//	p = copy(arr,a);
+//	printf("拷贝后结果为:%s\n", p);
+//
+//	return 0;
+//}
+
+//struct S
+//{
+//	char a : 3;
+//	char b : 4;
+//	char c : 5;
+//	char d : 4;
+//};
+//int main()
+//{
+//	struct S s = { 0 };
+//	s.a = 10;
+//	s.b = 12;
+//	s.c = 3;
+//	s.d = 4;
+//
+//	return 0;
+//}
+//
+//struct S
+//{
+//	int a : 2;
+//	int b : 4;
+//	int c : 10;
+//	int d : 30;
+//};
+//int main()
+//{
+//	struct S s;
+//	printf("%d\n", sizeof(s));
+//
+//	return 0;
+//}
+
+//struct s
+//{
+//	int data;
+//	int num;
+//};
+//void print1(struct s s)
+//{
+//	printf("%d,%d\n", s.data, s.num);
+//}
+//void print2(struct s* ps)
+//{
+//	printf("%d,%d\n", ps->data, ps->num);
+//}
+//int main()
+//{
+//	struct s s = { 0,2 };
+//	print1(s);
+//	print2(&s);
+//
+//	return 0;
+//}
+
 //void ZZ(char* arr1, char* arr2, int sz)
 //{
 //	int i = 0;
@@ -221,9 +416,6 @@
 //	ch = getchar();
 //	printf("\nThe number of the char is: %d\n", fun(a, ch));
 //}
-
-
-
 
 //int main()
 //{

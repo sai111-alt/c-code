@@ -2,56 +2,59 @@
 
 #include<stdio.h>
 
-void ZZ(int* left, int a, int b)
+int main()
 {
-	int arr1[20] = { 0 };
-	int i = 0;
-	int* right = left;//放最右边的数组元素地址
-	while (*right)
-	{
-		right++;
-	}
-	right--;
-	for (i = 0; i < (a-b); i++)
-	{
-		*(arr1+i) = *(left + i);
-	}
-	/*for (i = 0; i < b; i++)
-	{
-		*left = *right;
-		left++;
-		right--;
-	}*/
-	for (i = 0; i < (a - b); i++)
-	{
-		*left = *(arr1+i);
-		left++;
-	}
 
-}
-int main()//p291习题4
-{
-	int i = 0;
-	int a = 0;
-	int b = 0;
-	int arr[20] = { 0 };
-	printf("请输入数组中元素的个数：");
-	scanf("%d", &a);
-	printf("请输入%d个整数:\n",a);
-	for (i = 0; i < a; i++)
-	{
-		scanf("%d", &arr[i]);
-	}
-	printf("请输入移动的数据的个数：");
-	scanf("%d", &b);
-	ZZ(arr, a, b);
-	printf("移动后数据为:\n");
-	for (i = 0; i < a; i++)
-	{
-		printf("%d ", *(arr + i));
-	}
+
 	return 0;
 }
+
+//void ZZ(int* arr, int a, int b)
+//{
+//	int i = 0;
+//	int j = 0;
+//	int tmp = 0;
+//	for (j = 0; j < b; j++)
+//	{
+//		tmp = *(arr + a - 1);
+//		for (i = a - 1; i > 0; i--)
+//		{
+//			*(arr + i) = *(arr + i - 1);
+//		}
+//		*arr = tmp;
+//	}
+//	//注意：复习时这里也可以使用递归的思想
+//	//把外层的for循环改为
+//	//b--;
+//	//if (b > 0)
+//	//{
+//	//	ZZ(arr, a, b);
+//	//}
+//	//使用函数旋转b次即可
+//}
+//int main()//p291习题4
+//{
+//	int i = 0;
+//	int a = 0;
+//	int b = 0;
+//	int arr[20] = { 0 };
+//	printf("请输入数组中元素的个数：");
+//	scanf("%d", &a);
+//	printf("请输入%d个整数:\n",a);
+//	for (i = 0; i < a; i++)
+//	{
+//		scanf("%d", arr + i);
+//	}
+//	printf("请输入移动的数据的个数：");
+//	scanf("%d", &b);
+//	ZZ(arr, a, b);
+//	printf("移动后数据为:\n");
+//	for (i = 0; i < a; i++)
+//	{
+//		printf("%d ", *(arr + i));
+//	}
+//	return 0;
+//}
 
 //int ZZ(int a)
 //{
@@ -117,7 +120,7 @@ int main()//p291习题4
 //	return 0;
 //}
 
-//char* copy(char* arr,int a)
+//void* copy(char* arr,char* arr1,int a)
 //{
 //	int i = 0;
 //	a--;
@@ -125,19 +128,23 @@ int main()//p291习题4
 //	{
 //		arr++;
 //	}
-//	return arr;
+//	while (*arr)
+//	{
+//		*arr1++ = *arr++;
+//	}
 //}
 //int main()//p292第7题
 //{
 //	char arr[30] = { 0 };
+//	char arr1[30] = { 0 };
 //	int a = 0;
 //	char* p = NULL;
 //	printf("请输入一个字符串:");
 //	gets(arr);
 //	printf("请输入开始拷贝的字符串编号：");
 //	scanf("%d", &a);
-//	p = copy(arr,a);
-//	printf("拷贝后结果为:%s\n", p);
+//	copy(arr, arr1, a);
+//	printf("拷贝后结果为:%s\n", arr1);
 //
 //	return 0;
 //}

@@ -2,12 +2,128 @@
 
 #include<stdio.h>
 
-int main()
-{
+//void ZZ(int* n1, int* n2, int* n3)
+//{
+//	int tmp = 0;
+//	if (*n1 > *n2)
+//	{
+//		tmp = *n1;
+//		*n1 = *n2;
+//		*n2 = tmp;
+//	}
+//	if (*n1 > *n3)
+//	{
+//		tmp = *n1;
+//		*n1 = *n3;
+//		*n3 = tmp;
+//	}
+//	if (*n2 > *n3)
+//	{
+//		tmp = *n2;
+//		*n2 = *n3;
+//		*n3 = tmp;
+//	}
+//}
+//int main()//p291Ï°Ìâ1
+//{
+//	int n1 = 0;
+//	int n2 = 0;
+//	int n3 = 0;
+//	printf("input three integer n1,n2,n3:");
+//	scanf("%d,%d,%d", &n1, &n2, &n3);
+//	ZZ(&n1, &n2, &n3);
+//	printf("Now,the order is:%d,%d,%d", n1, n2, n3);
+//
+//	return 0;
+//}
 
+//#include<string.h>
+//void YY(char* str1, char* str2)
+//{
+//	char p[10] = { 0 };
+//	strcpy(p, str1);
+//	strcpy(str1, str2);
+//	strcpy(str2, p);
+//
+//}
+//void ZZ(char* arr1, char* arr2, char* arr3)
+//{
+//	if (strcmp(arr1, arr2) > 0)
+//	{
+//		YY(arr1, arr2);
+//	}
+//	if (strcmp(arr1, arr3) > 0)
+//	{
+//		YY(arr1, arr3);
+//	}	
+//	if (strcmp(arr2, arr3) > 0)
+//	{
+//		YY(arr1, arr2);
+//	}
+//}
+//int main()//p291Ï°Ìâ2
+//{
+//	char arr1[10] = { 0 };
+//	char arr2[10] = { 0 };
+//	char arr3[10] = { 0 };
+//	printf("input three line:\n");
+//	gets(arr1);
+//	gets(arr2);
+//	gets(arr3);
+//	ZZ(arr1, arr2, arr3);
+//	printf("Now,the order is:");
+//	printf("\n%s\n%s\n%s\n", arr1, arr2, arr3);
+//
+//	return 0;
+//}
 
-	return 0;
-}
+//void XX(int* arr)
+//{
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d", arr + i);
+//	}
+//}
+//void YY(int* arr)
+//{
+//	int i = 0;
+//	int tmp = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (*arr > *(arr + i))
+//		{
+//			tmp = *arr;
+//			*arr = *(arr + i);
+//			*(arr + i) = tmp;
+//		}
+//		if (*(arr + 9) < *(arr + i))
+//		{
+//			tmp = *(arr + 9);
+//			*(arr + 9) = *(arr + i);
+//			*(arr + i) = tmp;
+//		}
+//	}
+//}
+//void ZZ(int* arr)
+//{
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", *(arr + i));
+//	}
+//}
+//int main()//p291Ï°Ìâ3
+//{
+//	int arr[10] = { 0 };
+//	printf("input 10 number:");
+//	XX(arr);
+//	YY(arr);
+//	printf("Now,they are:");
+//	ZZ(arr);
+//
+//	return 0;
+//}
 
 //void ZZ(int* arr, int a, int b)
 //{

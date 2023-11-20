@@ -1,0 +1,5 @@
+﻿  prog1.c
+E:\KSWJJ\24000001\prog1\prog1.c(34,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\KSWJJ\24000001\prog1\prog1.c(35,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\KSWJJ\24000001\prog1\prog1.c(37,27): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  prog1.vcxproj -> E:\KSWJJ\24000001\prog1\Debug\prog1.exe

@@ -2,31 +2,44 @@
 
 #include<stdio.h>
 
-#include <conio.h>
-#include <stdio.h>
-#include <string.h>
-#include<windows.h>
-void fun(char* s, char t[])
-{
-
-    /**********  Begin  **********/
 
 
-
-
-
-    /**********   End  ***********/
-
-}
-void main()
-{
-    char s[100], t[100];
-    system("cls");
-    printf("\nPlease enter string S:"); scanf("%s", s);
-    fun(s, t);
-    printf("\nThe result is:%s\n", t);
-}
-
+//#include <conio.h>
+//#include <stdio.h>
+//#include <string.h>
+//#include<windows.h>
+//void fun(char* s, char t[])
+//{
+//    /**********  Begin  **********/
+//    int p = strlen(s) - 1;
+//    int i = 0;
+//    for (i = 0; i <= p; i++)
+//    {
+//        if (s[i] % 2 == 0 && i % 2 != 0)
+//        {
+//            s[i] = 0;
+//        }
+//    }
+//    for (i = 0; i <= p; i++)
+//    {
+//        if (*s)
+//        {
+//            *t++ = *s;
+//        }
+//        s++;
+//    }
+//    *t = 0;
+//    /**********   End  ***********/
+//
+//}
+//void main()//10-4
+//{
+//    char s[100], t[100];
+//    system("cls");
+//    printf("\nPlease enter string S:"); scanf("%s", s);
+//    fun(s, t);
+//    printf("\nThe result is:%s\n", t);
+//}
 
 //#include <stdio.h>
 //#include <math.h>

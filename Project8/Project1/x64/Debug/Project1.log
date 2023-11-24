@@ -1,3 +1,4 @@
 ﻿E:\RJ\C\Pofessional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 中间目录(x64\Debug\)包含从另一个项目(Project1_冲突文件_sai_20231119230120.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
   1.c
+E:\1网盘同步\BaiduSyncdisk\Project8\Project1\1.c(12,23): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   Project1.vcxproj -> E:\1网盘同步\BaiduSyncdisk\Project8\x64\Debug\Project1.exe

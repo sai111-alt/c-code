@@ -2,6 +2,191 @@
 
 #include<stdio.h>
 
+#include <conio.h>
+#include <stdio.h>
+#include <string.h>
+#include<windows.h>
+void fun(char* s, char t[])
+{
+
+    /**********  Begin  **********/
+
+
+
+
+
+    /**********   End  ***********/
+
+}
+void main()
+{
+    char s[100], t[100];
+    system("cls");
+    printf("\nPlease enter string S:"); scanf("%s", s);
+    fun(s, t);
+    printf("\nThe result is:%s\n", t);
+}
+
+
+//#include <stdio.h>
+//#include <math.h>
+//int  fun(int  n, int* value)
+//{
+//    int  d, s, i;
+//    /**************Error**************/
+//    d = 1;  s = 0;
+//    for (i = 1; i <= 5; i++)  d = d * n;
+//    *value = d;
+//    for (i = 1; i <= 3; i++)
+//    {
+//        s = s + d % 10;
+//        /**************Error**************/
+//        d = d / 10;
+//    }
+//    return  s;
+//}
+//void main()//10-3
+//{
+//    int  n, sum, v;
+//    do
+//    {
+//        printf("\nEnter n( 2<n<8):  "); scanf("%d", &n);
+//    } while (n <= 2 || n >= 8);
+//    sum = fun(n, &v);
+//    printf("\n\nThe result:\n  value=%d  sum=%d\n\n", v, sum);
+//}
+
+//#include <stdlib.h>
+//#include <stdio.h>
+//#define N 10
+//double fun(double x[], double* y)
+//{
+//    int i, j; double av;
+//    /**********FILL**********/
+//    av = 0.0;
+//    /**********FILL**********/
+//    for (i = 0; i < N; i++) av = av + x[i]/N;
+//    for (i = j = 0; i < N; i++)
+//        /**********FILL**********/
+//        if (x[i] > av) y[j++] = x[i];
+//    y[j] = -1;
+//    return av;
+//}
+//void main()//10-2
+//{
+//    int i; double x[N], y[N];
+//    for (i = 0; i < N; i++) { x[i] = rand() % 50; printf("%4.0f ", x[i]); }
+//    printf("\n");
+//    printf("\nThe average is: %f\n", fun(x, y));
+//    for (i = 0; y[i] >= 0; i++) printf("%5.1f ", y[i]);
+//    printf("\n");
+//}
+
+//#include <stdlib.h>
+//#include <stdio.h>
+//#include <time.h> 
+//void fun(int  a[], int  n, int* max, int* d)
+//{
+//
+//    /**********  Begin  **********/
+//    int i = 0;
+//    *max = a[0];
+//    *d = 0;
+//    for(i=1;i<n;i++)
+//    if (*max < a[i])
+//    {
+//        *max = a[i];
+//        *d = i;
+//    }
+//    /**********   End  ***********/
+//
+//}
+//void main()//10-1
+//{
+//    int i, x[20], max, index, n = 10;
+//    srand(time(0));
+//    for (i = 0; i < n; i++) { x[i] = rand() % 50; printf("%4d", x[i]); }
+//    printf("\n");
+//    fun(x, n, &max, &index);
+//    printf("Max =%5d ,  Index =%4d\n", max, index);
+//}
+
+//int main() 
+//{
+//	int x[]={ 1,3,5,7,2,4,6,0 }, i, j, k; 
+//	for (i = 0; i < 3; i++)
+//		for (j = 2; j >= i;j--)
+//			if (x[j + 1] > x[j]) 
+//			{ 
+//				k = x[j];
+//				x[j] = x[j + 1];
+//				x[j + 1] = k; 
+//			}
+//	for (i = 0; i < 3; i++)
+//		for (j = 4;j < 7 - i;j++)
+//			if (x[j + 1] > x[j]) 
+//			{
+//				k = x[j]; 
+//				x[j] = x[j + 1]; 
+//				x[j + 1] = k; 
+//			}
+//	for (i = 0; i < 3; i++)
+//		for (j = 4; j < 7 - i;j++)
+//			if (x[j] > x[j + 1]) 
+//			{ 
+//				k = x[j]; 
+//				x[j] = x[j + 1];
+//				x[j + 1] = k; 
+//			}
+//	for (i = 0; i < 8; i++) 
+//		printf("%d", x[i]);
+//
+//	printf("\n");
+//	return 0;
+//}
+
+//#include<string.h>
+//int main()
+//{
+//	//char a[5][10] = { "beijing"," china" ,"tiananmen" ,"welcome" ,"you" };
+//	char a[5][10] = { "china"," beijing" ,"you" ,"tiananmen" ,"welcome" };
+//	int i, j;
+//	char t[10];
+//	for (i = 0; i < 4; i++)
+//		for (j = i + 1; j < 5; j++)
+//			if (strcmp(a[i], a[j]) > 0)
+//			{
+//				strcpy(t, a[i]);
+//				strcpy(a[i], a[j]);
+//				strcpy(a[j], t);
+//			}
+//	puts(a[3]);
+//	return 0;
+//}
+
+//int main()
+//{
+//	char a[20], b[20], c[20]; 
+//	scanf("%s%s", a, b); 
+//	gets(c);
+//	printf("%s%s%s\n", a, b, c);
+//
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i = 0;
+//	int a[2][3] = { 0 };
+//	a[1 > 2][!1] = 1;
+//	for (i = 0; i < 2; i++)
+//	{
+//		printf("%d %d %d\n", a[i][0], a[i][1], a[i][2]);
+//	}
+//	return 0;
+//}
+
 //void ZZ(int* n1, int* n2, int* n3)
 //{
 //	int tmp = 0;

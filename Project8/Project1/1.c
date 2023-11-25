@@ -2,7 +2,135 @@
 
 #include<stdio.h>
 
+#include  <stdio.h>
+#include  <string.h>
+struct student {
+	long sno;
+	char name[10];
+	float score[3];
+};
+void fun(struct student a)
+{
+	struct student b; int i;
+	/**********FILL**********/
+	b = __1__;
+	b.sno = 10002;
+	/**********FILL**********/
+	strcpy(__2__, "LiSi");
+	printf("\nThe data after modified :\n");
+	printf("\nNo: %ld Name: %s\nScores: ", b.sno, b.name);
+	/**********FILL**********/
+	for (i = 0; i < 3; i++) printf("%6.2f ", b.__3__);
+	printf("\n");
+}
+void main()//10-8
+{
+	struct student s = { 10001,"ZhangSan", 95, 80, 88 };
+	int i;
+	printf("\n\nThe original data :\n");
+	printf("\nNo: %ld Name: %s\nScores: ", s.sno, s.name);
+	for (i = 0; i < 3; i++) printf("%6.2f ", s.score[i]);
+	printf("\n");
+	fun(s);
+}
 
+
+//#include <stdio.h>
+//#include <ctype.h>
+//#include <conio.h>
+//#include <windows.h>
+//void fun(char* str)
+//{
+//    /**********  Begin  **********/
+//    int i = 0;
+//    char* p = NULL;
+//    while (*str++)
+//    {
+//        if (*str == ' ')
+//        {
+//            p = str;
+//            while (*p)
+//            {
+//                *p++ = *(p + 1);
+//            }
+//        }
+//    }
+//    /**********   End  ***********/
+//}
+//void main()//10-7
+//{
+//    char str[81];
+//    system("cls");
+//    printf("Input a string:");
+//    gets(str);
+//    puts(str);
+//    fun(str);
+//    printf("*** str: %s\n", str);
+//}
+
+//#include  "ctype.h"
+//#include<windows.h>
+//************Error************/
+//#include  <stdio.h>
+//************Error************/
+//upfst(char*  p)
+//{
+//    int  k = 0;
+//    for (; *p; p++)
+//        if (k)
+//        {
+//            if (*p == ' ')   k = 0;
+//        }
+//        else  if (*p != ' ')
+//        {
+//            k = 1;   *p = toupper(*p);
+//        }
+//}
+//
+//void main()//10-6
+//{
+//    char   chrstr[81];
+//    system("cls");
+//    printf("\nPlease enter an English text line: ");   gets(chrstr);
+//    printf("\n\nBefore changing:\n  %s", chrstr);
+//    upfst(chrstr);
+//    printf("\nAfter changing:\n  %s\n", chrstr);
+//}
+
+//#include  <stdio.h>
+//#define M 3
+//#define N 5
+//void fun(int(*a)[N], int k)
+//{
+//    int i, j, p, temp;
+//    /**********FILL**********/
+//    for (p = 1; p <= k; p++)
+//        for (i = 0; i < M; i++)
+//        {
+//            temp = a[i][0];
+//            /**********FILL**********/
+//            for (j = 0; j < N-1; j++) a[i][j] = a[i][j + 1];
+//            /**********FILL**********/
+//            a[i][N - 1] = temp;
+//        }
+//}
+//main()//10-5
+//{
+//    int x[M][N] = { {1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5} }, i, j;
+//    printf("The array before moving:\n\n");
+//    for (i = 0; i < M; i++)
+//    {
+//        for (j = 0; j < N; j++) printf("%3d", x[i][j]);
+//        printf("\n");
+//    }
+//    fun(x, 2);
+//    printf("The array after moving:\n\n");
+//    for (i = 0; i < M; i++)
+//    {
+//        for (j = 0; j < N; j++) printf("%3d", x[i][j]);
+//        printf("\n");
+//    }
+//}
 
 //#include <conio.h>
 //#include <stdio.h>

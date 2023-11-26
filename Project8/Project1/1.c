@@ -2,38 +2,121 @@
 
 #include<stdio.h>
 
-#include  <stdio.h>
-#include  <string.h>
-struct student {
-	long sno;
-	char name[10];
-	float score[3];
-};
-void fun(struct student a)
-{
-	struct student b; int i;
-	/**********FILL**********/
-	b = __1__;
-	b.sno = 10002;
-	/**********FILL**********/
-	strcpy(__2__, "LiSi");
-	printf("\nThe data after modified :\n");
-	printf("\nNo: %ld Name: %s\nScores: ", b.sno, b.name);
-	/**********FILL**********/
-	for (i = 0; i < 3; i++) printf("%6.2f ", b.__3__);
-	printf("\n");
-}
-void main()//10-8
-{
-	struct student s = { 10001,"ZhangSan", 95, 80, 88 };
-	int i;
-	printf("\n\nThe original data :\n");
-	printf("\nNo: %ld Name: %s\nScores: ", s.sno, s.name);
-	for (i = 0; i < 3; i++) printf("%6.2f ", s.score[i]);
-	printf("\n");
-	fun(s);
-}
+//#include  <stdio.h>
+//#include  <string.h>
+//struct student {
+//	long sno;
+//	char name[10];
+//	float score[3];
+//};
+//
+//**********FILL**********/
+//struct student* fun(struct student* a)
+//{
+//	int i;
+//	a->sno = 10002;
+//	strcpy(a->name, "LiSi");
+//
+//	/**********FILL**********/
+//	for (i = 0; i < 3; i++) *(a->score+i) -= 1;
+//
+//	/**********FILL**********/
+//	return a;
+//}
+//main()//10-10
+//{
+//	struct student s = { 10001,"ZhangSan", 95, 80, 88 }, * t;
+//	int i;
+//	printf("\n\nThe original data :\n");
+//	printf("\nNo: %ld Name: %s\nScores: ", s.sno, s.name);
+//	for (i = 0; i < 3; i++) printf("%6.2f ", s.score[i]);
+//	printf("\n");
+//	t = fun(&s);
+//	printf("\nThe data after modified :\n");
+//	printf("\nNo: %ld Name: %s\nScores: ", t->sno, t->name);
+//	for (i = 0; i < 3; i++) printf("%6.2f ", t->score[i]);
+//	printf("\n");
+//}
 
+//#include <stdio.h>
+//#define N 8
+//typedef struct
+//{
+//    char num[10];
+//    double s;
+//} STREC;
+//double fun(STREC* a, STREC* b, int* n)
+//{
+//    /**********  Begin  **********/
+//    double ave = 0;
+//    int i = 0;
+//    *n = 0;
+//    for (i = 0; i < N; i++)
+//    {
+//        ave += (a + i)->s;
+//    }
+//    ave /= N;
+//    for (i = 0; i < N; i++)
+//    {
+//        if ((a + i)->s < ave)
+//        {
+//            *b++ = *(a + i);
+//            (*n)++;
+//        }
+//    }
+//    return ave;
+//    /**********   End  ***********/
+//
+//}
+//main()//10-9
+//{
+//    STREC s[N] = { {"GA05",85},{"GA03",76},{"GA02",69},{"GA04",85},{"GA01",91},{"GA07",72},{"GA08",64},{"GA06",87} };
+//    STREC h[N];
+//    FILE* out;
+//    int i, n; double ave;
+//    ave = fun(s, h, &n);
+//    printf("The %d student data which is lower than %7.3f:\n", n, ave);
+//    for (i = 0; i < n; i++)
+//        printf("%s %4.1f\n", h[i].num, h[i].s);
+//    printf("\n");
+//    out = fopen("out13.dat", "w");
+//    fprintf(out, "%d\n%7.3f\n", n, ave);
+//    for (i = 0; i < n; i++)
+//        fprintf(out, "%s %4.1f\n", h[i].num, h[i].s);
+//    fclose(out);
+//}
+
+//#include  <stdio.h>
+//#include  <string.h>
+//struct student {
+//	long sno;
+//	char name[10];
+//	float score[3];
+//};
+//void fun(struct student a)
+//{
+//	struct student b; int i;
+//	/**********FILL**********/
+//	b = a;
+//	b.sno = 10002;
+//	/**********FILL**********/
+//	strcpy(b.name, "LiSi");
+//	printf("\nThe data after modified :\n");
+//	printf("\nNo: %ld Name: %s\nScores: ", b.sno, b.name);
+//	/**********FILL**********/
+//	for (i = 0; i < 3; i++) printf("%6.2f ", b.score[i]);
+//	printf("\n");
+//}
+//void main()//10-8
+//{
+//	struct student s = { 10001,"ZhangSan", 95, 80, 88 };
+//	int i;
+//	printf("\n\nThe original data :\n");
+//	printf("\nNo: %ld Name: %s\nScores: ", s.sno, s.name);
+//	for (i = 0; i < 3; i++) printf("%6.2f ", s.score[i]);
+//	printf("\n");
+//	fun(s);
+//}
 
 //#include <stdio.h>
 //#include <ctype.h>
@@ -73,7 +156,7 @@ void main()//10-8
 //************Error************/
 //#include  <stdio.h>
 //************Error************/
-//upfst(char*  p)
+//void upfst(char*  p)
 //{
 //    int  k = 0;
 //    for (; *p; p++)
@@ -2182,23 +2265,4 @@ void main()//10-8
 //	p=(pow(i, n)-1)*100;
 //	printf("p=%.6f%%\n", p);
 //	return 0;
-//}
-
-//int main()
-//{
-//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
-//	int k = 17;
-//	int i = 0;
-//	int sz = sizeof(arr) / sizeof(arr[0]);
-//	for (i = 0; i < sz; i++)
-//	{
-//		if (k == arr[i])
-//		{
-//			printf("找到了，下标是：%d\n", i);
-//			break;
-//		}
-//	}
-//	if (i == sz)
-//		printf("找不到\n");
-//	return 0;
-//}
+//}                                                                                                                                                                                                                   

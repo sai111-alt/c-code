@@ -1,0 +1,11 @@
+﻿  PROG1.C
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(36,3): warning C4013: “gets”未定义；假设外部返回 int
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(58,15): warning C4477: “fscanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(59,12): warning C4133: “函数”: 从“int [200]”到“char *”的类型不兼容
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(59,17): warning C4133: “函数”: 从“int [200]”到“char *”的类型不兼容
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(60,15): warning C4477: “fprintf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(47,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(52,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(58,5): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\12\程序设计\1\proj1\PROG1.C(45,7): warning C4101: “m”: 未引用的局部变量
+  proj1.vcxproj -> E:\Desktop\12\程序设计\1\Debug\proj1.exe

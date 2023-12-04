@@ -1,0 +1,6 @@
+﻿  PROG1.C
+E:\Desktop\19\程序设计\1\proj1\PROG1.C(47,31): warning C4013: “gets”未定义；假设外部返回 int
+E:\Desktop\19\程序设计\1\proj1\PROG1.C(59,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\19\程序设计\1\proj1\PROG1.C(64,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\19\程序设计\1\proj1\PROG1.C(70,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  proj1.vcxproj -> E:\Desktop\19\程序设计\1\Debug\proj1.exe

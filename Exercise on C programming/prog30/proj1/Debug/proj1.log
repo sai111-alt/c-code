@@ -1,0 +1,8 @@
+﻿  PROG1.C
+E:\Desktop\51\程序设计\1\proj1\PROG1.C(40,3): warning C4013: “NONO”未定义；假设外部返回 int
+E:\Desktop\51\程序设计\1\proj1\PROG1.C(36,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\51\程序设计\1\proj1\PROG1.C(48,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\51\程序设计\1\proj1\PROG1.C(49,8): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\51\程序设计\1\proj1\PROG1.C(52,5): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\51\程序设计\1\proj1\PROG1.C(58): warning C4716: “NONO”: 必须返回一个值
+  proj1.vcxproj -> E:\Desktop\51\程序设计\1\Debug\proj1.exe

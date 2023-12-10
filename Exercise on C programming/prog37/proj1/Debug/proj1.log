@@ -1,0 +1,13 @@
+﻿  PROG1.C
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(72,6): error C2065: “a”: 未声明的标识符
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(73,8): error C2065: “num”: 未声明的标识符
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(74,6): error C2065: “b”: 未声明的标识符
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(75,10): error C2065: “other”: 未声明的标识符
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(77,5): warning C4013: “count”未定义；假设外部返回 int
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(78,25): error C2065: “a”: 未声明的标识符
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(79,27): error C2065: “num”: 未声明的标识符
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(80,25): error C2065: “b”: 未声明的标识符
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(81,29): error C2065: “other”: 未声明的标识符
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(60,6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(65,7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\Desktop\60\程序设计\1\proj1\PROG1.C(76,5): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

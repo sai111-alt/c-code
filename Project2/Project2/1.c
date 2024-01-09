@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 #include <stdio.h>
+#include <string.h>
 
 //#define MAX 10  //！！1
 
@@ -14,6 +15,7 @@
 
 int main()
 {
+
 	//int num1 = 20;  //！！2
 	//int num2 = 100;
 	//int max = 0;

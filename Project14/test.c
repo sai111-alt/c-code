@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-#include<stdio.h>
 #include"game.h"
 void menu()
 {
@@ -9,13 +8,52 @@ void menu()
 }
 void game()//游戏的具体实现
 {
-	char borad[ROW][COL] = { 0 };//3x3数组存放棋盘数据
-	InitBoard(borad, ROW, COL);//初始化棋盘
-	DisplayBoard(borad, ROW, COL);//打印棋盘
+	char ret = 0;
+	//ROW x COL数组存放棋盘数据
+	char borad[ROW][COL] = { 0 };
+	//初始化棋盘
+	InitBoard(borad, ROW, COL);
+	//打印棋盘
+	DisplayBoard(borad, ROW, COL);
+	//下棋
+	while (1)
+	{
+		//玩家下棋
+		PlayerMove(borad, ROW, COL);
+		DisplayBoard(borad, ROW, COL);
+		//判断玩家是否赢
+		ret = IsWin(borad, ROW, COL);
+		if (ret != 'C')
+		{
+			break;
+		}
+		//电脑下棋
+		ComputerMove(borad, ROW, COL);
+		DisplayBoard(borad, ROW, COL);
+		//判断电脑是否赢
+		ret = IsWin(borad, ROW, COL);
+		if (ret != 'C')
+		{
+			break;
+		}
+	}
+	if (ret == '*')
+	{
+		printf("玩家赢\n");
+	}
+	else if (ret == '#')
+	{
+		printf("电脑赢\n");
+	}
+	else
+	{
+		printf("平局\n");
+	}
 }
 void text()
 {
 	int input = 0;
+	srand((unsigned int)time(NULL));
 	do
 	{
 		menu();
@@ -25,7 +63,6 @@ void text()
 		{
 		case 1:
 			game();
-			printf("三子棋\n");
 			break;
 		case 0:
 			printf("退出游戏\n");

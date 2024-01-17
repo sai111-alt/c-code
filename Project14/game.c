@@ -81,6 +81,7 @@ void PlayerMove(char board[ROW][COL], int row, int col)
 	}
 }
 
+
 //µçÄÔÏÂÆå
 void ComputerMove(char board[ROW][COL], int row, int col)
 {

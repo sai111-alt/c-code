@@ -20,11 +20,16 @@ void game()
 	InitBoard(show, ROWS, COLS, '*');
 	//¥Ú”°∆Â≈Ã
 	DisplayBoard(show, ROW, COL);
-
+	//≤º÷√¿◊
+	SetMine(mine, ROW, COL);
+	//DisplayBoard(mine, ROW, COL);
+	//…®¿◊
+	FindMine(mine, show, ROW, COL);
 }
 void test()
 {
 	int input = 0;
+	srand((unsigned int)time(NULL));
 	do
 	{
 		menu();
@@ -33,6 +38,7 @@ void test()
 		switch(input)
 		{
 		case 1:
+			system("cls");
 			game();
 			break;
 		case 0:

@@ -2,7 +2,28 @@
 
 #include<stdio.h>
 
-//#include  <stdio.h>
+int main()
+{
+
+
+	return 0;
+}
+
+//int main()
+//{
+//	int arr[] = {1,2,3,4,5,1,2,3,4};
+//	int i = 0;
+//	int ret = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		ret = ret ^ arr[i];
+//	}
+//	printf("ÕÒµ½ÁË£¬ÊÇ£º%d\n", ret);
+//
+//	return 0;
+//}
+
 //#include  <string.h>
 //struct student {
 //	long sno;

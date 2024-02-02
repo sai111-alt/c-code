@@ -3,6 +3,31 @@
 #include<stdio.h>
 #include<string.h>
 
+#include<assert.h>
+void* my_memcpy(void* dest,const void* src,int num)
+{
+	void* ret = dest;
+	assert(dest != NULL);
+	assert(src != NULL);
+	while (num--)
+	{
+		*(char*)dest = *(char*)src;
+		++(char*)dest;
+		++(char*)src;
+	}
+	return ret;
+}
+int main()
+{
+	int arr1[] = { 1,2,3,4,5 };
+	int arr2[5] = { 0 };
+
+	//memcpy(arr2, arr1, sizeof(arr1));
+	my_memcpy(arr2, arr1, sizeof(arr1));
+
+	return 0;
+}
+
 //int main()
 //{
 //	int i = 0;
@@ -15,32 +40,32 @@
 //	return 0;
 //}
 
-int main()
-{
-	char arr[] = "123@234.@234";
-	char* p = "@.";
-
-	char buf[1024] = { 0 };
-	strcpy(buf, arr);
-
-	char* ret = NULL;
-
-	for (ret = strtok(buf, p); ret != NULL; ret = strtok(NULL, p))
-	{
-		printf("%s\n", ret);
-	}
-
-	//char* ret = strtok(buf, p);
-	//printf("%s\n", ret);
-
-	//ret = strtok(NULL, p);
-	//printf("%s\n", ret);
-
-	//ret = strtok(NULL, p);
-	//printf("%s\n", ret);
-
-	return 0;
-}
+//int main()
+//{
+//	char arr[] = "123@234.@234";
+//	char* p = "@.";
+//
+//	char buf[1024] = { 0 };
+//	strcpy(buf, arr);
+//
+//	char* ret = NULL;
+//
+//	for (ret = strtok(buf, p); ret != NULL; ret = strtok(NULL, p))
+//	{
+//		printf("%s\n", ret);
+//	}
+//
+//	//char* ret = strtok(buf, p);
+//	//printf("%s\n", ret);
+//
+//	//ret = strtok(NULL, p);
+//	//printf("%s\n", ret);
+//
+//	//ret = strtok(NULL, p);
+//	//printf("%s\n", ret);
+//
+//	return 0;
+//}
 
 //#include<ctype.h>
 //int main()

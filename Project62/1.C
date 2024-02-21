@@ -3,6 +3,75 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+typedef struct S
+{
+	int n;
+	int* arr;
+}SS;
+int main()
+{
+	SS* ps = (SS*)malloc(sizeof(SS));
+	ps->arr = malloc(5 * sizeof(int));
+	int i = 0;
+	for (i = 0; i < 5; i++)
+	{
+		ps->arr[i] = i;
+	}
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d ", ps->arr[i]);
+	}
+	int* ptr = realloc(ps->arr, 10 * sizeof(int));
+	if (ptr != NULL)
+	{
+		ps->arr = ptr;
+	}
+	for (i = 5; i < 10; i++)
+	{
+		ps->arr[i] = i;
+	}
+	printf("\n");
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", ps->arr[i]);
+	}
+
+	return 0;
+}
+
+//struct s
+//{
+//	int n;
+//	int arr[0];
+//};
+//
+//int main()
+//{
+//	struct s* ps = (struct s*)malloc(sizeof(struct s) + 5 * sizeof(int));
+//	ps->n = 100;
+//	int i = 0;
+//	for (i = 0; i < 5; i++)
+//	{
+//		ps->arr[i] = i;
+//	}
+//	struct s* ptr = realloc(ps, 44);
+//	if (ptr != NULL)
+//	{
+//		ps = ptr;
+//	}
+//	for (i = 5; i < 10; i++)
+//	{
+//		ps->arr[i] = i;
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", ps->arr[i]);
+//	}
+//	free(ps);
+//	ps = NULL;
+//
+//	return 0;
+//}
 
 //char* GetMemory(void)
 //{
@@ -13,7 +82,8 @@
 //void Test(void)
 //{
 //	char* str = NULL;
-//	str = GetMemory();
+//	str
+//  = GetMemory();
 //	printf(str);
 //}
 //int main()

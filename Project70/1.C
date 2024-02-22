@@ -6,19 +6,41 @@
 
 int main()
 {
-	FILE* pf = fopen("test.txt", "r");
-	if (pf == NULL)
-	{
-		return 0;
-	}
-	int ch = fgetc(pf);
-	printf("%d\n", ch);
 
-	fclose(pf);
-	pf = NULL;
 
 	return 0;
 }
+
+//int main()
+//{
+//	FILE* pf = fopen("eres.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("hehe");
+//		return 0;
+//	}
+//
+//	fclose(pf);
+//	return 0;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		return 0;
+//	}
+//	int ch = fgetc(pf);
+//	printf("%d\n", ch);
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
 
 //int main()
 //{

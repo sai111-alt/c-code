@@ -11,22 +11,38 @@ int main()
 	{
 		return 0;
 	}
-	//fseek(pf, -2, SEEK_END);
-	//int ch = fgetc(pf);
-	//printf("%c", ch);
-	int ch=fgetc(pf);
-	printf("%c\n", ch);
-	
-	rewind(pf);
-
-	ch = ftell(pf);
-	printf("%d", ch);
+	int ch = fgetc(pf);
+	printf("%d\n", ch);
 
 	fclose(pf);
 	pf = NULL;
 
 	return 0;
 }
+
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		return 0;
+//	}
+//	//fseek(pf, -2, SEEK_END);
+//	//int ch = fgetc(pf);
+//	//printf("%c", ch);
+//	int ch=fgetc(pf);
+//	printf("%c\n", ch);
+//	
+//	rewind(pf);
+//
+//	ch = ftell(pf);
+//	printf("%d", ch);
+//
+//	fclose(pf);
+//	pf = NULL;
+//
+//	return 0;
+//}
 
 //struct S
 //{

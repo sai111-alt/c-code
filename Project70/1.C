@@ -6,7 +6,28 @@
 
 int main()
 {
+	FILE* pf = fopen("test.txt", "r");
+	if (pf == NULL)
+	{
+		perror("open of test.txt");
+		return 0;
+	}
+	int ch = 0;
+	while ((ch = fgetc(pf)) != EOF)
+	{
+		putchar(ch);
+	}
+	if (ferror(pf))
+	{
+		printf("error\n");
+	}
+	else if (feof(pf))
+	{
+		printf("end of file\n");
+	}
 
+	fclose(pf);
+	pf = NULL;
 
 	return 0;
 }

@@ -1,2 +1,5 @@
 ﻿  1.c
+E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Project76\Project76\1.c(23,32): warning C4311: “类型强制转换”: 从“char *”到“int”的指针截断
+E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Project76\Project76\1.c(24,31): warning C4311: “类型强制转换”: 从“int *”到“int”的指针截断
+E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Project76\Project76\1.c(25,32): warning C4311: “类型强制转换”: 从“char *”到“int”的指针截断
   Project76.vcxproj -> E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Project76\x64\Debug\Project76.exe

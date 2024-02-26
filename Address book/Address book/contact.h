@@ -30,3 +30,4 @@ struct Contact
 void InitContact(struct Contact* ps);
 void AddContact(struct Contact* ps);
 void ShowContact(const struct Contact* ps);
+void DelContact(struct Contact* ps);

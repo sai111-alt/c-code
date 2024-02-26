@@ -55,3 +55,9 @@ void ShowContact(const struct Contact* ps)
 	}
 }
 
+void DelContact(struct Contact* ps)
+{
+	;
+}
+
+

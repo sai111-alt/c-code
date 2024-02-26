@@ -40,6 +40,7 @@ int main()
 			AddContact(&con);
 			break;
 		case 2:
+			DelContact(&con);
 			break;
 		case 3:
 			break;

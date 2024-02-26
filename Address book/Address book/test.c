@@ -25,9 +25,10 @@ void menu()
 int main()
 {
 	int input = 0;
-
-	struct PenInof con[MAX];
-
+	//创建通讯录
+	struct Contact con;
+	//初始化通讯录
+	InitContact(&con);
 	do
 	{
 		menu();
@@ -36,6 +37,7 @@ int main()
 		switch (input)
 		{
 		case 1:
+			AddContact(&con);
 			break;
 		case 2:
 			break;
@@ -44,6 +46,7 @@ int main()
 		case 4:
 			break;
 		case 5:
+			ShowContact(&con);
 			break;
 		case 6:
 			break;

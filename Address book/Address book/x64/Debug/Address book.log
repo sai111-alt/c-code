@@ -1,7 +1,3 @@
 ﻿  contact.c
-  test.c
-  正在生成代码...
-E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Address book\Address book\test.c(29,22): error C2065: “MAX”: 未声明的标识符
-E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Address book\Address book\test.c(29,19): error C2057: 应输入常量表达式
-E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Address book\Address book\test.c(29,22): error C2466: 不能分配常量大小为 0 的数组
-E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Address book\Address book\test.c(29,17): error C2133: “s”: 未知的大小
+E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Address book\Address book\contact.c(22,9): warning C4477: “scanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
+  Address book.vcxproj -> E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Address book\x64\Debug\Address book.exe

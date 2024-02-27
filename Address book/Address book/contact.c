@@ -86,7 +86,9 @@ void DelContact(struct Contact* ps)
 
 void SearchContact(const struct Contact* ps)
 {
+	char name[MAX_NAME];
 	printf("请输入要查找对象的名字:>");
+	scanf("%s", &name);
 
 }
 

@@ -1,3 +1,2 @@
 ﻿  contact.c
-E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Address book\Address book\contact.c(22,9): warning C4477: “scanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int *”
   Address book.vcxproj -> E:\学习\学习文件\软件              学习文件\C语言\C语言\c-code\Address book\x64\Debug\Address book.exe

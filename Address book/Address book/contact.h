@@ -10,6 +10,17 @@
 #define MAX_TELE 12
 #define MAX_ADDR 20
 
+enum Option
+{
+	EXIT,
+	ADD,
+	DEL,
+	SEARCH,
+	MODIFY,
+	SHOW,
+	SORT
+};
+
 struct PenInof
 {
 	char name[MAX_NAME];
@@ -31,3 +42,5 @@ void InitContact(struct Contact* ps);
 void AddContact(struct Contact* ps);
 void ShowContact(const struct Contact* ps);
 void DelContact(struct Contact* ps);
+void SearchContact(const struct Contact* ps);
+

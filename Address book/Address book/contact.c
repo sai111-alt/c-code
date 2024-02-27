@@ -19,7 +19,7 @@ void AddContact(struct Contact* ps)
 		printf("请输入名字:>");
 		scanf("%s", ps->data[ps->size].name);
 		printf("请输入年龄:>");
-		scanf("%s", &(ps->data[ps->size].age));
+		scanf("%d", &(ps->data[ps->size].age));
 		printf("请输入性别:>");
 		scanf("%s", ps->data[ps->size].sex);
 		printf("请输入电话:>");
@@ -57,7 +57,37 @@ void ShowContact(const struct Contact* ps)
 
 void DelContact(struct Contact* ps)
 {
-	;
+	char name[MAX_NAME];
+	printf("请输入要删除人的名字:>");
+	scanf("%s", &name);
+	int i = 0;
+	for (i = 0; i < ps->size; i++)
+	{
+		if (0 == strcmp(ps->data[i].name, name))
+		{
+			break;
+		}
+	}
+	if (i == ps->size)
+	{
+		printf("要删除的对象不存在\n");
+	}
+	else//删除数据
+	{
+		int j = 0;
+		for (j = i; j < ps->size - 1; j++)
+		{
+			ps->data[j] = ps->data[j + 1];
+		}
+		ps->size--;
+		printf("删除成功\n");
+	}
+}
+
+void SearchContact(const struct Contact* ps)
+{
+	printf("请输入要查找对象的名字:>");
+
 }
 
 

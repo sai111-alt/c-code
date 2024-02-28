@@ -61,7 +61,7 @@ void ShowContact(const struct Contact* ps)
 static int FindByName(const struct Contact*ps,char name[MAX_NAME])
 {
 	int i = 0;
-	for (i = 0; i < ps->size - 1; i++)
+	for (i = 0; i < ps->size; i++)
 	{
 		if (0 == strcmp(ps->data[i].name, name))
 		{

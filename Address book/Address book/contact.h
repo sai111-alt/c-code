@@ -2,8 +2,11 @@
 
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
-#define MAX 1000
+//#define MAX 1000
+
+#define DEFAULT_SZ 3
 
 #define MAX_NAME 20
 #define MAX_SEX 5
@@ -33,8 +36,10 @@ struct PenInof
 //通讯录
 struct Contact
 {
-	struct PenInof data[MAX];//存放人员信息
+	struct PenInof* data;//存放人员信息
 	int size;//存放通讯录当前已有的人数
+	int capacity;//存放通讯录当前的容量大小
+	//struct PenInof data[MAX];//存放人员信息
 };
 
 //函数声明
@@ -44,4 +49,5 @@ void ShowContact(const struct Contact* ps);
 void DelContact(struct Contact* ps);
 void SearchContact(const struct Contact* ps);
 void ModifyContact(struct Contact* ps);
+void DestroyContact(struct Contact* ps);
 

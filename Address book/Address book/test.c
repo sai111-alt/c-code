@@ -3,7 +3,7 @@
 #include"contact.h"
 
 //function：
-//1.可以存放1000个好友的信息，包括名字、电话、性别、住址、年龄
+//1.可以存放若干个好友，其中好友信息包括名字、电话、性别、住址、年龄
 //2.可以增加好友信息
 //3.可以删除指定名字的好友信息
 //4.可以查找好友信息
@@ -54,6 +54,8 @@ int main()
 		case SORT:
 			break;
 		case EXIT:
+			//销毁通讯录-释放动态开辟的内存
+			DestroyContact(&con);
 			printf("退出通讯录\n");
 			break;
 		default:

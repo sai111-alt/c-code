@@ -195,4 +195,20 @@ void DestroyContact(struct Contact* ps)
 	ps->data = NULL;
 }
 
+//用于保存通讯录的人员信息
+void SaveContact(struct Contact* ps)
+{
+	FILE* pfWrite = fopen("contat.txt", "w");
+	if (pfWrite == NULL)
+	{
+		perror("File creation failed");
+	}
+	//写通讯录信息到文件中
+
+
+	fclose(pfWrite);
+	pfWrite = NULL;
+}
+
+
 

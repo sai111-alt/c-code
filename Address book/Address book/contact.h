@@ -21,7 +21,7 @@ enum Option
 	SEARCH,
 	MODIFY,
 	SHOW,
-	SORT
+	SAVE
 };
 
 struct PenInof
@@ -50,4 +50,5 @@ void DelContact(struct Contact* ps);
 void SearchContact(const struct Contact* ps);
 void ModifyContact(struct Contact* ps);
 void DestroyContact(struct Contact* ps);
+void SaveContact(struct Contact* ps);
 

@@ -16,7 +16,7 @@ void menu()
 	printf("*********************************************\n");
 	printf("******      1.add            2.del     ******\n");
 	printf("******      3.search         4.modify  ******\n");
-	printf("******      5.show           6.sort    ******\n");
+	printf("******      5.show           6.save    ******\n");
 	printf("******      0.exti                     ******\n");
 	printf("*********************************************\n");
 
@@ -51,7 +51,8 @@ int main()
 		case SHOW:
 			ShowContact(&con);
 			break;
-		case SORT:
+		case SAVE:
+			SaveContact(&con);
 			break;
 		case EXIT:
 			//销毁通讯录-释放动态开辟的内存

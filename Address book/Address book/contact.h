@@ -51,4 +51,4 @@ void SearchContact(const struct Contact* ps);
 void ModifyContact(struct Contact* ps);
 void DestroyContact(struct Contact* ps);
 void SaveContact(struct Contact* ps);
-
+void LoadContact(struct Contact* ps);

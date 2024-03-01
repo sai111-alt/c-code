@@ -2,6 +2,8 @@
 
 #include"contact.h"
 
+//声明函数
+void LoadContact(struct Contact* ps);
 void InitContact(struct Contact* ps)
 {
 	//memset(ps->data, 0, sizeof(ps->data));
@@ -14,6 +16,30 @@ void InitContact(struct Contact* ps)
 	}
 	ps -> size = 0;
 	ps->capacity = DEFAULT_SZ;
+	LoadContact(ps);
+}
+
+void CheckCapacity(struct Contact* ps);
+//把文件中已经存放的通讯录中的信息加载到通讯录中
+void LoadContact(struct Contact* ps)
+{
+	struct PenInof tmp = { 0 };
+	FILE* pfRead = fopen("contact.txt","rb");
+	if (pfRead == NULL)
+	{
+		perror("LoadContact:");
+		return;
+	}
+	//读取文件，放到通讯录中
+	while (fread(&tmp, sizeof(struct PenInof), 1, pfRead))
+	{
+		CheckCapacity(ps);
+		ps->data[ps->size] = tmp;
+		ps->size++;
+	}
+
+	fclose(pfRead);
+	pfRead = NULL;
 }
 
 //用于检查通讯录空间内容是否足够，不够增容
@@ -198,12 +224,18 @@ void DestroyContact(struct Contact* ps)
 //用于保存通讯录的人员信息
 void SaveContact(struct Contact* ps)
 {
-	FILE* pfWrite = fopen("contat.txt", "w");
+	FILE* pfWrite = fopen("contact.txt", "w");
 	if (pfWrite == NULL)
 	{
-		perror("File creation failed");
+		perror("SaveContact:");
+		return;
 	}
 	//写通讯录信息到文件中
+	int i = 0;
+	for (i = 0; i < ps->size; i++)
+	{
+		fwrite(&(ps->data[i]), sizeof(struct PenInof), 1, pfWrite);
+	}
 
 
 	fclose(pfWrite);

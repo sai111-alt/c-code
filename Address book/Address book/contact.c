@@ -52,7 +52,6 @@ void CheckCapacity(struct Contact* ps)
 		{
 			ps->data = ptr;
 			ps->capacity += 2;
-			printf("ÔöÈİ³É¹¦\n");
 		}
 		else
 		{

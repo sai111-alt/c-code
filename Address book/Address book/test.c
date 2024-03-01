@@ -55,9 +55,9 @@ int main()
 			SaveContact(&con);
 			break;
 		case EXIT:
+			SaveContact(&con);
 			//销毁通讯录-释放动态开辟的内存
 			DestroyContact(&con);
-			SaveContact(&con);
 			printf("退出通讯录\n");
 			break;
 		default:
